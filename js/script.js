@@ -1,9 +1,15 @@
 // Menu
-
 let menu = document.querySelector('.menu-icon');
+let navbar = document.querySelector('.navbar') 
 
 menu.onclick = () => {
-    menu.classList.toggle("move")
+    menu.classList.toggle("move");
+    navbar.classList.toggle("open-menu");
+}
+// Close MEnu On Scroll
+window.onscroll = () => {
+    menu.classList.remove("move");
+    navbar.classList.remove("open-menu");
 }
 
 // Swiper Js
@@ -37,3 +43,24 @@ var swiper = new Swiper(".selling-content", {
         },
     }
   });
+
+    // Nav Background Change
+    let header = document.querySelector('header')
+
+    window.addEventListener("scroll", () => {
+        header.classList.toggle('header-active', window.scrollY > 0 );
+    });
+
+    // scrollReveal Animation
+    const animate = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: '2500',
+        delay: '400',
+    });
+
+    animate.reveal(".nav,..heading,.subscribe p,.email-box");
+    animate.reveal(".home-layer-1,.home-layer-2,subscribe img", {origin : "left"});
+    animate.reveal(".home-content", {origin : "bottom"});
+    animate.reveal(".deal-box,.offer-box,.sale-box,.ticket-box", {nterval : 100,})
+

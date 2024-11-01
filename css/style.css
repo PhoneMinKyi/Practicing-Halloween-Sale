@@ -53,6 +53,12 @@ header {
     left: 0;
     width: 100%;
     z-index: 100;
+    transition: background 0.3s ease;
+}
+
+header.header-active{
+    background: var(--body-color);
+    transition: background 0.3s ease;
 }
 
 .nav {
@@ -379,3 +385,163 @@ margin: 10px 0 14px;
     color: var(--text-color);
 }
 /* Product Section Ends */
+
+/* Ticket Section Starts */
+.ticket-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 1.8rem;
+}
+
+.ticket-box{
+    background: #3f2655;
+    text-align: center;
+    padding: 60px 35px;
+    border-radius: 1rem;
+}
+
+.ticket-box h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    border-bottom: 3px dashed var(--text-color);
+    padding-bottom: 15px;
+}
+
+.ticket-box span{
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin-bottom: 1px;
+    color: var(--main-color);
+    font-family: var(--font-family-2);
+}
+
+.t-info {
+    margin: 1.5rem 0 1.8rem;
+}
+
+.t-info{
+    font-size: 0.88rem;
+    margin-top: 10px;
+}
+/* Ticket Section Ends */
+
+/* Subscribe Section Starts */
+.subscribe{
+    max-width: 650px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+}
+
+.subscribe img{
+    width: 100px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+.subscribe .heading{
+    margin-bottom: 10px;
+}
+
+.subscribe p{
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.email-box{
+    background: #3f2655;
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 2px;
+    border-radius: 2rem;
+}
+
+#email{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-color);
+    padding: 15px;
+}
+
+.subscribe-btn{
+    border: none;
+    outline: none;
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: 10px 15px;
+    border-radius: 1.8rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.subscribe-btn:hover{
+    background: var(--body-color);
+    transition: 0.3s ease;
+}
+/* Subscribe Section Ends */
+
+/* Footer Starts */
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3,240px);
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.footer-box{
+    display: grid;
+    gap: 10px;
+}
+
+.footer-box a{
+    color: var(--text-color);
+    font-size: 0.94rem;
+}
+
+.footer-box .logo{
+    font-size: 2rem;
+    color: var(--main-color);
+    text-align: center;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social .bx{
+    bottom: #3f2655;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.social .bx:hover{
+    background: var(--main-color);
+    transition: background 0.3s ease;
+}
+
+.footer-box p{
+    font-size: 0.9rem;
+}
+
+.copyright{
+    padding: 30px 0;
+    text-align: center;
+}
+/* Footer Ends */
+
+
+
